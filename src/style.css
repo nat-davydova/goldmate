@@ -1,5 +1,17 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
 
+:root {
+    /* colors declarations !!! DON'T USE IT outside :root or directly */
+    --white: #fff;
+
+    /* functions colors declarations !!! USE ONLY THEM */
+    --light: var(--white);
+
+    --font-color--light: var(--light);
+
+    --font-size--xxl: 110px;
+}
+
 html,
 body {
     min-height: 100vh;
@@ -71,5 +83,26 @@ img {
 }
 
 .hero__logo {
+    margin-top: 230px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo--xl {
+    gap: 40px;
+}
+
+.logo--xl .logo__image {
     width: 150px;
+}
+
+.logo--xl .logo__text {
+    font-size: var(--font-size--xxl);
+}
+
+.logo--light {
+    color: var(--font-color--light);
 }
