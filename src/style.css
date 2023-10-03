@@ -1,11 +1,14 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Roboto:wght@300;400;700&display=swap');
 :root {
     /* colors declarations !!! DON'T USE IT outside :root or directly */
     --white: #fff;
 
     /* functions colors declarations !!! USE ONLY THEM */
     --light: var(--white);
+
+    --font-family--primary: 'Roboto', sans-serif;
+    --font-family--accent: 'Playfair Display', serif;
 
     --font-color--light: var(--light);
 
@@ -16,6 +19,10 @@ html,
 body {
     min-height: 100vh;
     overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-family--primary);
 }
 
 img {
