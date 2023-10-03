@@ -18,6 +18,8 @@
     --font-size--default: 16px;
     --font-size--xxl: 110px;
 
+    --font-weight--regular: 400;
+
     --overlay-color: rgba(0, 0, 0, .8);
 }
 
@@ -97,6 +99,7 @@ img {
 
 .logo--xl .logo__text {
     font-size: var(--font-size--xxl);
+    font-weight: var(--font-weight--regular);
 }
 
 .logo--light {
