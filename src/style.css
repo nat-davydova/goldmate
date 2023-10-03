@@ -17,6 +17,7 @@
 
     --font-size--default: 16px;
     --font-size--md: 24px;
+    --font-size--lg: 36px;
     --font-size--xxl: 110px;
 
     --font-weight--regular: 400;
@@ -143,4 +144,10 @@ img {
     height: 1px;
     content: '';
     background-color: var(--bg-color--light);
+}
+
+.hero-card__title {
+    font-size: var(--font-size--lg);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
