@@ -16,11 +16,14 @@
     --font-color--light: var(--light);
 
     --font-size--default: 16px;
+    --font-size--md: 24px;
     --font-size--xxl: 110px;
 
     --font-weight--regular: 400;
 
     --overlay-color: rgba(0, 0, 0, .8);
+
+    --bg-color--light: var(--light);
 }
 
 html,
@@ -109,14 +112,35 @@ img {
 .hero__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 250px
+    width: 100%;
+    gap: 200px;
 }
 
 .hero-card {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     text-align: center;
     color: var(--font-color--light);
+}
+
+.hero-card__subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    font-family: var(--font-family--accent);
+    font-size: var(--font-size--md);
+}
+
+.hero-card__subtitle:before,
+.hero-card__subtitle:after {
+    display: flex;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: var(--bg-color--light);
 }
