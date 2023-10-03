@@ -3,8 +3,10 @@
 :root {
     /* colors declarations !!! DON'T USE IT outside :root or directly */
     --white: #fff;
+    --orange: #ff7f00;
 
     /* functions colors declarations !!! USE ONLY THEM */
+    --accent: var(--orange);
     --light: var(--white);
 
     --font-family--primary: 'Roboto', sans-serif;
