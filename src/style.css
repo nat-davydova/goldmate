@@ -47,6 +47,28 @@ img {
     margin: auto;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo--xl {
+    gap: 40px;
+}
+
+.logo--xl .logo__image {
+    width: 150px;
+}
+
+.logo--xl .logo__text {
+    font-size: var(--font-size--xxl);
+    font-weight: var(--font-weight--regular);
+}
+
+.logo--light {
+    color: var(--font-color--light);
+}
+
 .hero {
     position: relative;
     height: 100vh;
@@ -84,24 +106,17 @@ img {
     z-index: 3;
 }
 
-.logo {
+.hero__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 250px
+}
+
+.hero-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-.logo--xl {
-    gap: 40px;
-}
-
-.logo--xl .logo__image {
-    width: 150px;
-}
-
-.logo--xl .logo__text {
-    font-size: var(--font-size--xxl);
-    font-weight: var(--font-weight--regular);
-}
-
-.logo--light {
+    gap: 15px;
+    text-align: center;
     color: var(--font-color--light);
 }
