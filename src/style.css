@@ -138,6 +138,11 @@ img {
     }
 }
 
+.hero-swiper {
+    width: 100%;
+    max-width: 700px;
+}
+
 .hero-card {
     display: flex;
     flex-direction: column;
