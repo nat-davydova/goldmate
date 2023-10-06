@@ -113,19 +113,22 @@ img {
 
 .hero__cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 100px;
     width: 100%;
-    gap: 200px;
 }
 
 .hero-card {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    width: 100%;
+    padding: 30px;
     text-align: center;
     color: var(--font-color--light);
+    background-color: rgba(0,0,0,.75);
 }
 
 .hero-card__subtitle {
