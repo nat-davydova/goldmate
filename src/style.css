@@ -9,6 +9,9 @@
     --accent: var(--orange);
     --light: var(--white);
 
+    /* media queries */
+    --screen-lg: 1170px;
+
     /* other variables */
     --font-family--primary: 'Roboto', sans-serif;
     --font-family--accent: 'Playfair Display', serif;
@@ -112,11 +115,27 @@ img {
 }
 
 .hero__cards {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
-    gap: 100px;
+    gap: 25px;
     width: 100%;
+}
+
+@media (min-width: 1170px) {
+    .hero__cards {
+        display: grid;
+    }
+}
+
+.hero__cards-slider {
+    display: block;
+}
+
+@media (min-width: 1170px) {
+    .hero__cards-slider {
+        display: none;
+    }
 }
 
 .hero-card {
