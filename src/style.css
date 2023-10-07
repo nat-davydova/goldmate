@@ -10,7 +10,9 @@
     --light: var(--white);
 
     /* media queries: we can't use them in @media directly but shall use only these breakpoints */
-    --screen-lg: 1170px;
+    --screen-xl: 1170px;
+    --screen-md: 750px;
+    --screen-sm: 530px;
 
     /* other variables */
     --font-family--primary: 'Roboto', sans-serif;
@@ -132,17 +134,20 @@ img {
 .hero__cards-slider {
     display: block;
     position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+@media (min-width: 750px) {
+    .hero__cards-slider {
+        min-width: 600px;
+    }
 }
 
 @media (min-width: 1170px) {
     .hero__cards-slider {
         display: none;
     }
-}
-
-.hero-swiper {
-    width: 100%;
-    max-width: 600px;
 }
 
 .hero-swiper__pagination.swiper-pagination {
@@ -159,6 +164,7 @@ img {
     opacity: 1;
 }
 
+
 .hero-swiper__pagination .swiper-pagination-bullet-active {
     background-color: var(--bg-color--accent);
 }
@@ -167,8 +173,10 @@ img {
     --hero-slider-nav-btn-offset: 50px;
 }
 
+
 .hero-swiper__nav-btn.swiper-button-next,
 .hero-swiper__nav-btn.swiper-button-prev {
+    display: none;
     transition: color .2s linear 0s;
     color: var(--font-color--light);
 }
@@ -184,6 +192,13 @@ img {
 
 .hero-swiper__nav-btn.swiper-button-next {
     right: calc(var(--hero-slider-nav-btn-offset) * -1);
+}
+
+@media (min-width: 520px) {
+    .hero-swiper__nav-btn.swiper-button-next,
+    .hero-swiper__nav-btn.swiper-button-prev {
+        display: block;
+    }
 }
 
 .hero-card {

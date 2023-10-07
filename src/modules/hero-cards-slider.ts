@@ -6,7 +6,7 @@ export const initHeroCardsSlider = () =>
     // configure Swiper to use modules
     modules: [Navigation, Pagination, Autoplay],
     autoplay: {
-      delay: 5000,
+      delay: 4000,
     },
     loop: true,
     pagination: {
