@@ -145,7 +145,7 @@ img {
     max-width: 700px;
 }
 
-.hero-swiper__pagination {
+.hero-swiper__pagination.swiper-pagination {
     top: calc(100% + 20px) !important;
 }
 
@@ -161,6 +161,29 @@ img {
 
 .hero-swiper__pagination .swiper-pagination-bullet-active {
     background-color: var(--bg-color--accent);
+}
+
+.hero-swiper__nav-btn {
+    --hero-slider-nav-btn-offset: 50px;
+}
+
+.hero-swiper__nav-btn.swiper-button-next,
+.hero-swiper__nav-btn.swiper-button-prev {
+    transition: color .2s linear 0s;
+    color: var(--font-color--light);
+}
+
+.hero-swiper__nav-btn.swiper-button-next:hover,
+.hero-swiper__nav-btn.swiper-button-prev:hover {
+    color: var(--font-color--accent);
+}
+
+.hero-swiper__nav-btn.swiper-button-prev {
+    left: calc(var(--hero-slider-nav-btn-offset) * -1);
+}
+
+.hero-swiper__nav-btn.swiper-button-next {
+    right: calc(var(--hero-slider-nav-btn-offset) * -1);
 }
 
 .hero-card {
