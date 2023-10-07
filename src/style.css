@@ -54,6 +54,8 @@ img {
     height: 100%;
 }
 
+/* UI Components */
+
 .container {
     width: 95%;
     max-width: 1170px;
@@ -111,6 +113,18 @@ img {
 .logo--light {
     color: var(--font-color--light);
 }
+
+.section {
+    padding: 100px 0;
+}
+
+.section__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+}
+
+/* Website components */
 
 .hero {
     position: relative;
