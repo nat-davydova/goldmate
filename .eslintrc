@@ -1,7 +1,8 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": 2017,
+    "project": "./tsconfig.json"
   },
   "settings": {
     "import/resolver": {
@@ -9,6 +10,9 @@
         "extensions": [".js", ".jsx", ".ts", ".tsx"],
         "paths": ["src"]
       }
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     }
   },
   "rules": {
@@ -16,6 +20,7 @@
       "error",
       "ignorePackages",
       {
+        "": "never",
         "js": "never",
         "jsx": "never",
         "ts": "never",
@@ -48,6 +53,7 @@
   },
   "extends": [
     "airbnb-base",
+    "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:prettier/recommended",
