@@ -12,7 +12,7 @@
     /* media queries: we can't use them in @media directly but shall use only these breakpoints */
     --screen-xl: 1170px;
     --screen-md: 750px;
-    --screen-sm: 530px;
+    --screen-sm: 550px;
 
     /* other variables */
     --font-family--primary: 'Roboto', sans-serif;
@@ -24,7 +24,9 @@
     --font-size--default: 16px;
     --font-size--md: 24px;
     --font-size--lg: 36px;
-    --font-size--xxl: 110px;
+    --font-size--xl: 60px;
+    --font-size--2xl: 90px;
+    --font-size--3xl: 110px;
 
     --font-weight--regular: 400;
 
@@ -64,16 +66,43 @@ img {
 }
 
 .logo--xl {
-    gap: 40px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 750px) {
+    .logo--xl {
+        flex-direction: row;
+        gap: 40px;
+    }
 }
 
 .logo--xl .logo__image {
-    width: 150px;
+    width: 120px;
+}
+
+@media (min-width: 750px) {
+    .logo--xl .logo__image {
+        width: 150px;
+    }
 }
 
 .logo--xl .logo__text {
-    font-size: var(--font-size--xxl);
+    font-size: var(--font-size--xl);
     font-weight: var(--font-weight--regular);
+    margin: 0;
+}
+
+@media (min-width: 550px) {
+    .logo--xl .logo__text {
+        font-size: var(--font-size--2xl);
+    }
+}
+
+@media (min-width: 750px) {
+    .logo--xl .logo__text {
+        font-size: var(--font-size--3xl);
+    }
 }
 
 .logo--light {
@@ -112,9 +141,15 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 220px;
+    gap: 120px;
     height: 100%;
     z-index: 3;
+}
+
+@media (min-width: 750px) {
+    .hero__wrapper {
+        gap: 220px;
+    }
 }
 
 .hero__cards {
