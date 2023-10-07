@@ -29,6 +29,7 @@
     --overlay-color: rgba(0, 0, 0, .8);
 
     --bg-color--light: var(--light);
+    --bg-color--accent: var(--accent);
 }
 
 html,
@@ -130,6 +131,7 @@ img {
 
 .hero__cards-slider {
     display: block;
+    position: relative;
 }
 
 @media (min-width: 1170px) {
@@ -141,6 +143,24 @@ img {
 .hero-swiper {
     width: 100%;
     max-width: 700px;
+}
+
+.hero-swiper__pagination {
+    top: calc(100% + 20px) !important;
+}
+
+.hero-swiper__pagination .swiper-pagination-bullet {
+    --bullet-dimensions: 12px;
+
+    width: var(--bullet-dimensions);
+    height: var(--bullet-dimensions);
+    margin: 0 6px !important;
+    background-color: var(--bg-color--light);
+    opacity: 1;
+}
+
+.hero-swiper__pagination .swiper-pagination-bullet-active {
+    background-color: var(--bg-color--accent);
 }
 
 .hero-card {
