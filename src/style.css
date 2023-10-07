@@ -4,10 +4,12 @@
     /* colors declarations !!! DON'T USE IT outside :root or directly */
     --white: #fff;
     --orange: #ff7f00;
+    --grey: #333333;
 
     /* functions colors declarations !!! USE ONLY THEM */
     --accent: var(--orange);
     --light: var(--white);
+    --primary: var(--grey);
 
     /* media queries: we can't use them in @media directly but shall use only these breakpoints */
     --screen-xl: 1200px;
@@ -21,14 +23,17 @@
 
     --font-color--accent: var(--accent);
     --font-color--light: var(--light);
+    --font-color--primary: var(--primary);
 
     --font-size--default: 16px;
     --font-size--md: 24px;
     --font-size--lg: 36px;
-    --font-size--xl: 60px;
-    --font-size--2xl: 90px;
-    --font-size--3xl: 110px;
+    --font-size--xl: 45px;
+    --font-size--2xl: 60px;
+    --font-size--3xl: 90px;
+    --font-size--4xl: 110px;
 
+    --font-weight--light: 300;
     --font-weight--regular: 400;
     --font-weight--medium: 600;
 
@@ -47,6 +52,7 @@ body {
 body {
     font-family: var(--font-family--primary);
     font-size: var(--font-size--default);
+    color: var(--font-color--primary);
 }
 
 img {
@@ -92,7 +98,7 @@ img {
 }
 
 .logo--xl .logo__text {
-    font-size: var(--font-size--xl);
+    font-size: var(--font-size--2xl);
     font-weight: var(--font-weight--regular);
     margin: 0;
     text-align: center;
@@ -100,13 +106,13 @@ img {
 
 @media (min-width: 550px) {
     .logo--xl .logo__text {
-        font-size: var(--font-size--2xl);
+        font-size: var(--font-size--3xl);
     }
 }
 
 @media (min-width: 750px) {
     .logo--xl .logo__text {
-        font-size: var(--font-size--3xl);
+        font-size: var(--font-size--4xl);
         text-align: left;
     }
 }
@@ -143,6 +149,13 @@ img {
     font-size: var(--font-size--md);
     font-weight: var(--font-weight--medium);
     color: var(--font-color--accent);
+}
+
+.section__title {
+    font-size: var(--font-size--xl);
+    font-weight: var(--font-weight--light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 /* Website components */
