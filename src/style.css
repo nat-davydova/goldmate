@@ -9,7 +9,7 @@
     --accent: var(--orange);
     --light: var(--white);
 
-    /* media queries */
+    /* media queries: we can't use them in @media directly but shall use only these breakpoints */
     --screen-lg: 1170px;
 
     /* other variables */
@@ -142,7 +142,7 @@ img {
 
 .hero-swiper {
     width: 100%;
-    max-width: 700px;
+    max-width: 600px;
 }
 
 .hero-swiper__pagination.swiper-pagination {
@@ -190,12 +190,22 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     width: 100%;
     padding: 30px;
     text-align: center;
     color: var(--font-color--light);
     background-color: rgba(0,0,0,.75);
+}
+
+.hero-card.swiper-slide {
+    display: flex;
+}
+
+@media (min-width: 1170px) {
+    .hero-card {
+        gap: 15px;
+    }
 }
 
 .hero-card__subtitle {

@@ -10,7 +10,7 @@ const swiper = new Swiper(".hero-swiper", {
   // configure Swiper to use modules
   modules: [Navigation, Pagination, Autoplay],
   autoplay: {
-    delay: 3000,
+    delay: 5000,
   },
   loop: true,
   pagination: {
