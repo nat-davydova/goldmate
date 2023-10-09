@@ -385,3 +385,9 @@ img {
 .hero-card__link:hover > svg {
     animation: heroCardIcon .4s infinite alternate cubic-bezier(0, 0, 0.81, -0.2);
 }
+
+.why-work__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+}
