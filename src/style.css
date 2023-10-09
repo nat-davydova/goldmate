@@ -53,6 +53,7 @@ body {
     font-family: var(--font-family--primary);
     font-size: var(--font-size--default);
     color: var(--font-color--primary);
+    line-height: 1.5;
 }
 
 img {
@@ -136,7 +137,7 @@ img {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .section__subtitle,
@@ -156,6 +157,18 @@ img {
     font-weight: var(--font-weight--light);
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.section__description {
+    max-width: 600px;
+}
+
+.section__description p {
+    margin-top: 0;
+}
+
+.section__description p:last-child {
+    margin-bottom: 0;
 }
 
 /* Website components */
@@ -291,7 +304,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 10px;
     width: 100%;
     padding: 30px;
     text-align: center;
