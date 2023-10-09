@@ -5,11 +5,13 @@
     --white: #fff;
     --orange: #ff7f00;
     --grey: #333333;
+    --light-grey: #7f7f7f;
 
     /* functions colors declarations !!! USE ONLY THEM */
     --accent: var(--orange);
     --light: var(--white);
     --primary: var(--grey);
+    --secondary: var(--light-grey);
 
     /* media queries: we can't use them in @media directly but shall use only these breakpoints */
     --screen-xl: 1200px;
@@ -24,6 +26,7 @@
     --font-color--accent: var(--accent);
     --font-color--light: var(--light);
     --font-color--primary: var(--primary);
+    --font-color--secondary: var(--secondary);
 
     --font-size--default: 16px;
     --font-size--md: 24px;
@@ -161,6 +164,7 @@ img {
 
 .section__description {
     max-width: 600px;
+    color: var(--font-color--secondary);
 }
 
 .section__description p {
