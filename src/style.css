@@ -389,5 +389,5 @@ img {
 .why-work__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 100px;
+    gap: 50px;
 }
