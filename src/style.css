@@ -400,7 +400,6 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
     text-align: center;
 }
 
@@ -411,14 +410,23 @@ svg {
     height: var(--icon-dimensions);
     padding: 25px;
     color: var(--font-color--accent);
-    border: 3px solid currentColor;
+    border: 2px solid currentColor;
     border-radius: 50%;
 }
 
 .why-work-card__title {
-    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-weight: var(--font-weight--medium);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .why-work-card__descr {
-    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.why-work-card__link {
+    margin-top: 20px;
 }
