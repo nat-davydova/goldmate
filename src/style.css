@@ -401,6 +401,7 @@ svg {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    overflow: hidden;
 }
 
 .why-work-card__icon {
@@ -425,6 +426,10 @@ svg {
 .why-work-card__descr {
     margin-top: 20px;
     margin-bottom: 0;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .why-work-card__link {
