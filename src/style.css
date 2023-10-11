@@ -40,7 +40,7 @@
     --font-weight--regular: 400;
     --font-weight--medium: 600;
 
-    --line-height: 1.5rem;
+    --line-height: 1.5;
 
     --overlay-color: rgba(0, 0, 0, .7);
 
@@ -183,6 +183,18 @@ svg {
 
 .section__description p:last-child {
     margin-bottom: 0;
+}
+
+.btn {
+    display: flex;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 100px
+}
+
+.btn--accent {
+    color: var(--font-color--light);
+    background-color: var(--bg-color--accent);
 }
 
 /* Website components */
