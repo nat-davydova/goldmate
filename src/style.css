@@ -418,8 +418,19 @@ svg {
 
 .why-work__cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 50px;
+}
+
+@media (min-width: 750px) {
+    .why-work__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .why-work__cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .why-work-card {
