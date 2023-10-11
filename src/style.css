@@ -430,15 +430,47 @@ svg {
     text-align: center;
 }
 
+.why-work-card:hover .why-work-card__icon {
+    color: var(--font-color--light);
+}
+
+.why-work-card:hover .why-work-card__icon:after {
+    transform: scale(1);
+    opacity: 1;
+}
+
 .why-work-card__icon {
     --icon-dimensions: 100px;
 
+    position: relative;
     width: var(--icon-dimensions);
     height: var(--icon-dimensions);
     padding: 25px;
     color: var(--font-color--accent);
+    transition: color .2s linear;
     border: 2px solid currentColor;
     border-radius: 50%;
+}
+
+.why-work-card__icon:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transform: scale(0.35);
+    transition: all .2s linear;
+    background-color: var(--bg-color--accent);
+    border-radius: inherit;
+    opacity: 0;
+    z-index: -1;
+}
+
+.why-work-card__icon svg {
+    position: relative;
+    z-index: 2;
 }
 
 .why-work-card__title {
