@@ -4,11 +4,13 @@
     /* colors declarations !!! DON'T USE IT outside :root or directly */
     --white: #fff;
     --orange: #ff7f00;
+    --dark-orange: #cc5c02;
     --grey: #333333;
     --light-grey: #7f7f7f;
 
     /* functions colors declarations !!! USE ONLY THEM */
     --accent: var(--orange);
+    --accent-dark: var(--dark-orange);
     --light: var(--white);
     --primary: var(--grey);
     --secondary: var(--light-grey);
@@ -24,6 +26,7 @@
     --font-family--accent: 'Playfair Display', serif;
 
     --font-color--accent: var(--accent);
+    --font-color--accent-dark: var(--accent-dark);
     --font-color--light: var(--light);
     --font-color--primary: var(--primary);
     --font-color--secondary: var(--secondary);
@@ -46,6 +49,7 @@
 
     --bg-color--light: var(--light);
     --bg-color--accent: var(--accent);
+    --bg-color--accent-dark: var(--accent-dark);
 }
 
 html,
@@ -194,7 +198,12 @@ svg {
 
 .btn--accent {
     color: var(--font-color--light);
+    transition: background-color .2s linear 0s;
     background-color: var(--bg-color--accent);
+}
+
+.btn--accent:hover {
+   background-color: var(--bg-color--accent-dark);
 }
 
 /* Website components */
