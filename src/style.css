@@ -40,6 +40,8 @@
     --font-weight--regular: 400;
     --font-weight--medium: 600;
 
+    --line-height: 1.5rem;
+
     --overlay-color: rgba(0, 0, 0, .7);
 
     --bg-color--light: var(--light);
@@ -52,11 +54,14 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    font-size: var(--font-size--default);
+}
+
 body {
     font-family: var(--font-family--primary);
-    font-size: var(--font-size--default);
     color: var(--font-color--primary);
-    line-height: 1.5;
+    line-height: var(--line-height);
 }
 
 img,
@@ -400,8 +405,8 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
     text-align: center;
-    overflow: hidden;
 }
 
 .why-work-card__icon {
@@ -416,7 +421,6 @@ svg {
 }
 
 .why-work-card__title {
-    margin-top: 30px;
     margin-bottom: 0;
     font-weight: var(--font-weight--medium);
     text-transform: uppercase;
@@ -424,14 +428,9 @@ svg {
 }
 
 .why-work-card__descr {
-    margin-top: 20px;
     margin-bottom: 0;
-    -webkit-line-clamp: 3;
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .why-work-card__link {
-    margin-top: 20px;
+    margin-top: auto;
 }
