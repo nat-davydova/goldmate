@@ -82,7 +82,7 @@ svg {
 /* UI Components */
 
 .container {
-    width: 95%;
+    width: 90%;
     max-width: 1170px;
     height: 100%;
     margin: auto;
@@ -140,13 +140,29 @@ svg {
 }
 
 .section {
-    padding: 100px 0;
+    --section-offset-y: 70px;
+
+    padding: var(--section-offset-y) 0;
+}
+
+@media (min-width: 950px) {
+    .section {
+        --section-offset-y: 100px;
+    }
 }
 
 .section__wrapper {
+    --section-wrapper-gap: 60px;
+
     display: flex;
     flex-direction: column;
-    gap: 110px;
+    gap: var(--section-wrapper-gap);
+}
+
+@media (min-width: 950px) {
+    .section__wrapper {
+        --section-wrapper-gap: 100px;
+    }
 }
 
 .section__header {
@@ -170,10 +186,18 @@ svg {
 }
 
 .section__title {
-    font-size: var(--font-size--xl);
+    --section-title-font-size: var(--font-size--lg);
+
+    font-size: var(--section-title-font-size);
     font-weight: var(--font-weight--light);
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+@media (min-width: 950px) {
+    .section__title {
+        --section-title-font-size: var(--font-size--xl);
+    }
 }
 
 .section__description {
@@ -451,16 +475,24 @@ svg {
 }
 
 .why-work-card__icon {
-    --icon-dimensions: 100px;
+    --icon-dimensions: 80px;
+    --icon-offset: 15px;
 
     position: relative;
     width: var(--icon-dimensions);
     height: var(--icon-dimensions);
-    padding: 25px;
+    padding: var(--icon-offset);
     color: var(--font-color--accent);
     transition: color .2s linear;
     border: 2px solid currentColor;
     border-radius: 50%;
+}
+
+@media (min-width: 750px) {
+    .why-work-card__icon {
+        --icon-dimensions: 100px;
+        --icon-offset: 25px;
+    }
 }
 
 .why-work-card__icon:after {
@@ -485,13 +517,21 @@ svg {
 }
 
 .why-work-card__title {
+    margin-top: 0;
     margin-bottom: 0;
     font-weight: var(--font-weight--medium);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
+@media (min-width: 750px) {
+    .why-work-card__title {
+        margin-top: 20px;
+    }
+}
+
 .why-work-card__descr {
+    margin-top: 0;
     margin-bottom: 0;
 }
 
