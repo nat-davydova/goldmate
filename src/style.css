@@ -3,6 +3,7 @@
 :root {
     /* colors declarations !!! DON'T USE IT outside :root or directly */
     --white: #fff;
+    --white-smoke: #fbfbfb;
     --orange: #ff7f00;
     --dark-orange: #cc5c02;
     --grey: #333333;
@@ -14,6 +15,7 @@
     --light: var(--white);
     --primary: var(--grey);
     --secondary: var(--light-grey);
+    --tertiary: var(--white-smoke);
 
     /* media queries: we can't use them in @media directly but shall use only these breakpoints */
     --screen-xl: 1200px;
@@ -48,6 +50,7 @@
     --overlay-color: rgba(0, 0, 0, .7);
 
     --bg-color--light: var(--light);
+    --bg-color--tertiary: var(--tertiary);
     --bg-color--accent: var(--accent);
     --bg-color--accent-dark: var(--accent-dark);
 }
@@ -151,6 +154,22 @@ svg {
     }
 }
 
+.section-with-media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section--offset-x {
+    --section-offset: 50px;
+
+    padding-left: var(--section-offset);
+    padding-right: var(--section-offset);
+}
+
+.section--with-bg {
+    background-color: var(--bg-color--tertiary);
+}
+
 .section__wrapper {
     --section-wrapper-gap: 60px;
 
@@ -216,18 +235,6 @@ svg {
 
 .section__description p:last-child {
     margin-bottom: 0;
-}
-
-.section-with-media {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.section--offset-x {
-    --section-offset: 50px;
-
-    padding-left: var(--section-offset);
-    padding-right: var(--section-offset);
 }
 
 .btn {
