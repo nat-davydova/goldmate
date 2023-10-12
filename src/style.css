@@ -562,3 +562,8 @@ svg {
 .why-work-card__link {
     margin-top: auto;
 }
+
+.skills {
+    display: flex;
+    gap: 30px;
+}
