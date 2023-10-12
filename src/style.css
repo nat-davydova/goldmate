@@ -173,6 +173,11 @@ svg {
     gap: 20px;
 }
 
+.section__header--align-left {
+    align-items: flex-start;
+    text-align: left;
+}
+
 .section__subtitle,
 .section__title {
     margin: 0;
@@ -219,7 +224,7 @@ svg {
 }
 
 .section--offset-x {
-    --section-offset: 30px;
+    --section-offset: 50px;
 
     padding-left: var(--section-offset);
     padding-right: var(--section-offset);
