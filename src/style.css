@@ -213,6 +213,18 @@ svg {
     margin-bottom: 0;
 }
 
+.section-with-media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section--offset-x {
+    --section-offset: 30px;
+
+    padding-left: var(--section-offset);
+    padding-right: var(--section-offset);
+}
+
 .btn {
     display: flex;
     padding: 10px 30px;
