@@ -84,6 +84,10 @@ svg {
 
 /* UI Components */
 
+.js-hidden {
+    display: none;
+}
+
 .container {
     width: 90%;
     max-width: 1170px;
