@@ -28,6 +28,8 @@ function createCustomProgressBar({
   const progressBar = document.createElement("div");
   progressBar.classList.add("progress__bar");
   progressBar.setAttribute("data-progress-value", progressValue.toString());
+
+  progressWrapper.appendChild(progressBar);
 }
 
 export function setSkillProgressBars(selector: string) {
