@@ -163,6 +163,11 @@ svg {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.section__media img {
+    object-fit: cover;
+    object-position: left;
+}
+
 .section--offset-x {
     --section-offset: 50px;
 
