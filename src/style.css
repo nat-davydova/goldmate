@@ -576,3 +576,7 @@ svg {
     display: flex;
     gap: 30px;
 }
+
+.skill progress {
+    display: none; /* we hide native progress and create custom bars */
+}

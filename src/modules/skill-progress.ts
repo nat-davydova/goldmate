@@ -20,6 +20,11 @@ function createCustomProgressBar({
   progressBar.classList.add("progress__bar");
   progressBar.setAttribute("data-progress-value", progressValue.toString());
 
+  const progressPercentage = document.createElement("span");
+  progressPercentage.textContent = `${progressValue}%`;
+
+  progressBar.appendChild(progressPercentage);
+
   progress.appendChild(progressBar);
 
   return progress;
@@ -43,7 +48,6 @@ export function setSkillProgressBars(selector: string) {
   progressBars.forEach((progressBar) => {
     const max = progressBar.getAttribute("max");
     const value = progressBar.getAttribute("value");
-    progressBar.classList.add("js-hidden");
     const customProgress = createCustomProgressBar({ max, value });
     const progressParent = progressBar.parentElement;
     progressParent?.appendChild(customProgress);
