@@ -7,14 +7,16 @@
     --orange: #ff7f00;
     --dark-orange: #cc5c02;
     --grey: #333333;
-    --light-grey: #7f7f7f;
+    --light-grey: #d7d7d7;
+    --medium-grey: #717171;
 
     /* functions colors declarations !!! USE ONLY THEM */
     --accent: var(--orange);
     --accent-dark: var(--dark-orange);
+    --ghost: var(--light-grey);
     --light: var(--white);
     --primary: var(--grey);
-    --secondary: var(--light-grey);
+    --secondary: var(--medium-grey);
     --tertiary: var(--white-smoke);
 
     /* media queries: we can't use them in @media directly but shall use only these breakpoints */
@@ -54,6 +56,8 @@
     --bg-color--tertiary: var(--tertiary);
     --bg-color--accent: var(--accent);
     --bg-color--accent-dark: var(--accent-dark);
+    --bg-color--secondary: var(--secondary);
+    --bg-color--ghost: var(--ghost);
 }
 
 html,
@@ -586,6 +590,9 @@ svg {
     width: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     list-style-type: none;
 }
 
@@ -594,4 +601,17 @@ svg {
     font-weight: var(--font-weight--bold);
     text-transform: uppercase;
     letter-spacing: .3px;
+}
+
+.skill__progress {
+    --skill-progress-height: 6px;
+    --skill-progress-border-radius: calc(var(--skill-progress-height) / 2);
+
+    height: var(--skill-progress-height);
+    background-color: var(--bg-color--ghost);
+    border-radius: var(--skill-progress-border-radius);
+}
+
+.skill__progress span {
+    display: none;
 }
