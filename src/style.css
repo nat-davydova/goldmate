@@ -44,6 +44,7 @@
     --font-weight--light: 300;
     --font-weight--regular: 400;
     --font-weight--medium: 600;
+    --font-weight--bold: 700;
 
     --line-height: 1.5;
 
@@ -590,4 +591,7 @@ svg {
 
 .skill__title {
     margin: 0;
+    font-weight: var(--font-weight--bold);
+    text-transform: uppercase;
+    letter-spacing: .3px;
 }
