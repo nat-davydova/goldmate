@@ -1,10 +1,18 @@
-// 1. rename
 // 2. insert into html
+// 2.2 create new func
+// 2.3 create wrapper
+// 2.4 insert into wrapper
+// 2.5 insert into html
 // 3. fix 100% value
 
 interface ICreateCustomProgressBarProps {
   value: string | null;
   max: string | null;
+}
+
+interface IInsertCustomProgressBarsIntoDOMProps {
+  customProgressBars: HTMLElement[];
+  parentElem: HTMLElement;
 }
 
 function createCustomProgressBar({
@@ -26,11 +34,20 @@ function createCustomProgressBar({
 
   progress.appendChild(progressBar);
 
-  console.log(progressValue);
+  return progress;
+}
+
+function insertCustomProgressBarsIntoDOM({
+  customProgressBars,
+  parentElem,
+}: IInsertCustomProgressBarsIntoDOMProps) {
+  console.log({ customProgressBars, parentElem });
 }
 
 export function setSkillProgressBars(selector: string) {
-  const skillsWrapper = document.querySelector(`${selector}`);
+  const skillsWrapper: HTMLElement | null = document.querySelector(
+    `${selector}`,
+  );
 
   if (!skillsWrapper) {
     throw new Error("skillsWrapper not found");
@@ -42,10 +59,18 @@ export function setSkillProgressBars(selector: string) {
     return;
   }
 
+  const customProgressBars: HTMLElement[] = [];
+
   progressBars.forEach((progressBar) => {
     const max = progressBar.getAttribute("max");
     const value = progressBar.getAttribute("value");
     progressBar.classList.add("js-hidden");
-    createCustomProgressBar({ max, value });
+    const customProgress = createCustomProgressBar({ max, value });
+    customProgressBars.push(customProgress);
+  });
+
+  insertCustomProgressBarsIntoDOM({
+    customProgressBars,
+    parentElem: skillsWrapper,
   });
 }
