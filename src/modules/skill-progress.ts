@@ -1,11 +1,13 @@
 interface ICreateCustomProgressBarProps {
   value: string | null;
   max: string | null;
+  className?: string;
 }
 
 function createCustomProgressBar({
   max,
   value,
+  className,
 }: ICreateCustomProgressBarProps) {
   if (typeof value === null || Number.isNaN(Number(value)) || !Number(max)) {
     throw new Error("Progress max or value is not a number");
@@ -15,6 +17,10 @@ function createCustomProgressBar({
 
   const progress = document.createElement("div");
   progress.classList.add("progress");
+
+  if (className) {
+    progress.classList.add(className);
+  }
 
   const progressBar = document.createElement("div");
   progressBar.classList.add("progress__bar");
@@ -48,7 +54,11 @@ export function setSkillProgressBars(selector: string) {
   progressBars.forEach((progressBar) => {
     const max = progressBar.getAttribute("max");
     const value = progressBar.getAttribute("value");
-    const customProgress = createCustomProgressBar({ max, value });
+    const customProgress = createCustomProgressBar({
+      max,
+      value,
+      className: `skill__progress`,
+    });
     const progressParent = progressBar.parentElement;
     progressParent?.appendChild(customProgress);
   });
