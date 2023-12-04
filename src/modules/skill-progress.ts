@@ -1,9 +1,3 @@
-// 2. insert into html
-// 2.3 create wrapper
-// 2.4 insert into wrapper
-// 2.5 insert into html
-// 3. fix 100% value
-
 interface ICreateCustomProgressBarProps {
   value: string | null;
   max: string | null;
@@ -17,7 +11,7 @@ function createCustomProgressBar({
     throw new Error("Progress max or value is not a number");
   }
 
-  const progressValue = Math.round(Number(value) / Number(max)) * 100;
+  const progressValue = Math.round((Number(value) / Number(max)) * 100);
 
   const progress = document.createElement("div");
   progress.classList.add("progress");
