@@ -580,3 +580,14 @@ svg {
 .skill progress {
     display: none; /* we hide native progress and create custom bars */
 }
+
+.skills__list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.skill__title {
+    margin: 0;
+}
