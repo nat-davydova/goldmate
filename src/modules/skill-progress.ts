@@ -4,6 +4,19 @@ interface ICreateCustomProgressBarProps {
   className?: string;
 }
 
+const PROGRESS_CLASSNAME = "progress";
+
+function createProgressElem(className?: string) {
+  const progress = document.createElement("div");
+  progress.classList.add(`${PROGRESS_CLASSNAME}`);
+
+  if (className) {
+    progress.classList.add(className);
+  }
+
+  return progress;
+}
+
 function createCustomProgressBar({
   max,
   value,
@@ -15,12 +28,7 @@ function createCustomProgressBar({
 
   const progressValue = Math.round((Number(value) / Number(max)) * 100);
 
-  const progress = document.createElement("div");
-  progress.classList.add("progress");
-
-  if (className) {
-    progress.classList.add(className);
-  }
+  const progress = createProgressElem(className);
 
   const progressBar = document.createElement("div");
   progressBar.classList.add("progress__bar");
@@ -31,7 +39,7 @@ function createCustomProgressBar({
   progressPercentage.classList.add("progress__percentage");
   progressPercentage.textContent = `${progressValue}%`;
 
-  progressBar.appendChild(progressPercentage);
+  progress.appendChild(progressPercentage);
 
   progress.appendChild(progressBar);
 
