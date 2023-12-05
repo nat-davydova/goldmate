@@ -17,6 +17,17 @@ function createProgressElem(className?: string) {
   return progress;
 }
 
+function createProgressBarElem(progressValue: number) {
+  const reformattedProgressValue = progressValue.toString();
+
+  const progressBar = document.createElement("div");
+  progressBar.classList.add(`${PROGRESS_CLASSNAME}__bar`);
+  progressBar.setAttribute("data-progress-value", reformattedProgressValue);
+  progressBar.style.width = `${reformattedProgressValue}%`;
+
+  return progressBar;
+}
+
 function createCustomProgressBar({
   max,
   value,
@@ -29,11 +40,7 @@ function createCustomProgressBar({
   const progressValue = Math.round((Number(value) / Number(max)) * 100);
 
   const progress = createProgressElem(className);
-
-  const progressBar = document.createElement("div");
-  progressBar.classList.add("progress__bar");
-  progressBar.setAttribute("data-progress-value", progressValue.toString());
-  progressBar.style.width = `${progressValue.toString()}%`;
+  const progressBar = createProgressBarElem(progressValue);
 
   const progressPercentage = document.createElement("span");
   progressPercentage.classList.add("progress__percentage");
