@@ -5,9 +5,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { initHeroCardsSlider } from "./modules/hero-cards-slider";
-import { setSkillProgressBars } from "./modules/skill-progress.ts";
+import { setSkillProgressBars } from "./modules/skill-progress";
 
 window.addEventListener("load", () => {
   initHeroCardsSlider();
-  setSkillProgressBars(".about-skills");
+  setSkillProgressBars();
 });
