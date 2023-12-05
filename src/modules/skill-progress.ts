@@ -25,6 +25,7 @@ function createCustomProgressBar({
   const progressBar = document.createElement("div");
   progressBar.classList.add("progress__bar");
   progressBar.setAttribute("data-progress-value", progressValue.toString());
+  progressBar.style.width = `${progressValue.toString()}%`;
 
   const progressPercentage = document.createElement("span");
   progressPercentage.textContent = `${progressValue}%`;

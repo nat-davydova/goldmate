@@ -615,3 +615,9 @@ svg {
 .skill__progress span {
     display: none;
 }
+
+.skill__progress .progress__bar {
+    height: inherit;
+    background-color: var(--bg-color--accent);
+    border-radius: inherit;
+}
