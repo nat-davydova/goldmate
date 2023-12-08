@@ -601,30 +601,31 @@ svg {
     --skill-progress-border-radius: calc(var(--skill-progress-height) / 2);
 
     position: relative;
+}
+
+.skill__progress .progress__bar {
+    position: relative;
     height: var(--skill-progress-height);
     background-color: var(--bg-color--ghost);
     border-radius: var(--skill-progress-border-radius);
 }
 
-.skill__progress .progress__bar {
-    height: inherit;
+.skill__progress .progress__bar-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     background-color: var(--bg-color--accent);
     border-radius: inherit;
 }
 
 .skill__progress .progress__title {
-    position: absolute;
-    left: 0;
-    top: calc(var(--skill-progress-height) * 4 * -1);
     font-weight: var(--font-weight--bold);
     text-transform: uppercase;
     letter-spacing: .3px;
 }
 
 .skill__progress .progress__percentage {
-    position: absolute;
-    right: 0;
-    top: calc(var(--skill-progress-height) * 4 * -1);
     font-weight: var(--font-weight--bold);
     letter-spacing: .3px;
 }

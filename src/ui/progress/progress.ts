@@ -29,7 +29,12 @@ function createProgressBarElem(progressValue: number) {
   const progressBar = document.createElement("div");
   progressBar.classList.add(`${PROGRESS_CLASSNAME}__bar`);
   progressBar.setAttribute("data-progress-value", reformattedProgressValue);
-  progressBar.style.width = `${reformattedProgressValue}%`;
+
+  const progressBarInner = document.createElement("div");
+  progressBarInner.classList.add(`${PROGRESS_CLASSNAME}__bar-inner`);
+  progressBarInner.style.width = `${reformattedProgressValue}%`;
+
+  progressBar.appendChild(progressBarInner);
 
   return progressBar;
 }
@@ -71,8 +76,8 @@ function createCustomProgressBar({
   const progressPercentage = createProgressPercentageElem(progressValue);
   const progressTitle = createProgressTitleElem(title);
 
-  progress.appendChild(progressPercentage);
   progress.appendChild(progressTitle);
+  progress.appendChild(progressPercentage);
   progress.appendChild(progressBar);
 
   return progress;
