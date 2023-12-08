@@ -1,6 +1,7 @@
 interface ICreateCustomProgressBarProps {
   value: string | null;
   max: string | null;
+  title: string | null;
   className?: string;
 }
 
@@ -35,28 +36,43 @@ function createProgressBarElem(progressValue: number) {
 
 function createProgressPercentageElem(progressValue: number) {
   const progressPercentage = document.createElement("span");
-  progressPercentage.classList.add("progress__percentage");
+  progressPercentage.classList.add(`${PROGRESS_CLASSNAME}__percentage`);
   progressPercentage.textContent = `${progressValue}%`;
 
   return progressPercentage;
+}
+
+function createProgressTitleElem(title: string) {
+  const progressTitle = document.createElement("span");
+  progressTitle.classList.add(`${PROGRESS_CLASSNAME}__title`);
+  progressTitle.textContent = title;
+
+  return progressTitle;
 }
 
 function createCustomProgressBar({
   max,
   value,
   className,
+  title,
 }: ICreateCustomProgressBarProps) {
-  if (typeof value === null || Number.isNaN(Number(value)) || !Number(max)) {
+  if (value === null || Number.isNaN(Number(value)) || !Number(max)) {
     throw new Error("Progress max or value is not a number");
+  }
+
+  if (!title) {
+    throw new Error("Progress title doesn't exist");
   }
 
   const progressValue = Math.round((Number(value) / Number(max)) * 100);
 
-  const progress = createProgressElem(className);
+  const progress = createProgressElem(`${className}`);
   const progressBar = createProgressBarElem(progressValue);
   const progressPercentage = createProgressPercentageElem(progressValue);
+  const progressTitle = createProgressTitleElem(title);
 
   progress.appendChild(progressPercentage);
+  progress.appendChild(progressTitle);
   progress.appendChild(progressBar);
 
   return progress;
@@ -83,10 +99,12 @@ export function setProgressBars({
   progressBars.forEach((progressBar) => {
     const max = progressBar.getAttribute("max");
     const value = progressBar.getAttribute("value");
+    const title = progressBar.getAttribute("data-title");
     const customProgress = createCustomProgressBar({
       max,
       value,
       className,
+      title,
     });
     const progressParent = progressBar.parentElement;
     progressParent?.appendChild(customProgress);

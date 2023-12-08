@@ -596,13 +596,6 @@ svg {
     list-style-type: none;
 }
 
-.skill__title {
-    margin: 0;
-    font-weight: var(--font-weight--bold);
-    text-transform: uppercase;
-    letter-spacing: .3px;
-}
-
 .skill__progress {
     --skill-progress-height: 6px;
     --skill-progress-border-radius: calc(var(--skill-progress-height) / 2);
@@ -617,6 +610,15 @@ svg {
     height: inherit;
     background-color: var(--bg-color--accent);
     border-radius: inherit;
+}
+
+.skill__progress .progress__title {
+    position: absolute;
+    left: 0;
+    top: calc(var(--skill-progress-height) * 4 * -1);
+    font-weight: var(--font-weight--bold);
+    text-transform: uppercase;
+    letter-spacing: .3px;
 }
 
 .skill__progress .progress__percentage {
