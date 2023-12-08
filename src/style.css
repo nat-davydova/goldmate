@@ -601,10 +601,15 @@ svg {
     --skill-progress-border-radius: calc(var(--skill-progress-height) / 2);
 
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .skill__progress .progress__bar {
     position: relative;
+    flex-shrink: 0;
+    width: 100%;
     height: var(--skill-progress-height);
     background-color: var(--bg-color--ghost);
     border-radius: var(--skill-progress-border-radius);
