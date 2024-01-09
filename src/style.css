@@ -13,6 +13,7 @@
     /* functions colors declarations !!! USE ONLY THEM */
     --accent: var(--orange);
     --accent-dark: var(--dark-orange);
+    --dark: var(--grey);
     --ghost: var(--light-grey);
     --light: var(--white);
     --primary: var(--grey);
@@ -58,6 +59,7 @@
     --bg-color--accent-dark: var(--accent-dark);
     --bg-color--secondary: var(--secondary);
     --bg-color--ghost: var(--ghost);
+    --bg-color--dark: var(--dark);
 }
 
 html,
@@ -633,4 +635,18 @@ svg {
 .skill__progress .progress__percentage {
     font-weight: var(--font-weight--bold);
     letter-spacing: .3px;
+}
+
+.skills__accessory {
+    padding: 15px 5px;
+    color: var(--font-color--light);
+    font-family: var(--font-family--accent);
+    font-size: var(--font-size--md);
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    letter-spacing: 1.5px;
+    transform: rotate(180deg);
+    background-color: var(--bg-color--dark);
+    border-radius: 6px;
 }
