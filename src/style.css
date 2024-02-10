@@ -22,7 +22,7 @@
 
     /* media queries: we can't use them in @media directly but shall use only these breakpoints */
     --screen-xl: 1200px;
-    --screen-lg: 950px;
+    --screen-lg: 1000px;
     --screen-md: 750px;
     --screen-sm: 550px;
 
@@ -61,6 +61,8 @@
     --bg-color--secondary: var(--secondary);
     --bg-color--ghost: var(--ghost);
     --bg-color--dark: var(--dark);
+
+    --border-color--accent: var(--accent);
 }
 
 html,
@@ -160,7 +162,7 @@ svg {
     padding: var(--section-offset-y) 0;
 }
 
-@media (min-width: 950px) {
+@media (min-width: 1000px) {
     .section {
         --section-offset-y: 100px;
     }
@@ -195,7 +197,7 @@ svg {
     gap: var(--section-wrapper-gap);
 }
 
-@media (min-width: 950px) {
+@media (min-width: 1000px) {
     .section__wrapper {
         --section-wrapper-gap: 100px;
     }
@@ -236,7 +238,7 @@ svg {
     text-transform: uppercase;
 }
 
-@media (min-width: 950px) {
+@media (min-width: 1000px) {
     .section__title {
         --section-title-font-size: var(--font-size--xl);
         --section-title-font-weight: var(--font-weight--light);
@@ -271,6 +273,19 @@ svg {
 
 .btn--accent:hover {
    background-color: var(--bg-color--accent-dark);
+}
+
+.btn--bordered {
+    color: var(--font-color--secondary);
+    transition: all .2s linear 0s;
+    border: 2px solid currentColor;
+    background-color: transparent;
+}
+
+.btn--bordered:hover {
+    color: var(--font-color--light);
+    background-color: var(--bg-color--accent);
+    border-color: var(--border-color--accent)
 }
 
 /* Website components */
@@ -484,8 +499,10 @@ svg {
 }
 
 .why-work__cards {
+    --gap: 50px;
+
     display: grid;
-    gap: 50px;
+    gap: var(--gap);
 }
 
 @media (min-width: 750px) {
@@ -501,21 +518,24 @@ svg {
     }
 }
 
+@media (min-width: 1000px) {
+    .why-work__cards {
+        --gap: 30px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .why-work__cards {
+        --gap: 50px;
+    }
+}
+
 .why-work-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     text-align: center;
-}
-
-.why-work-card:hover .why-work-card__icon {
-    color: var(--font-color--light);
-}
-
-.why-work-card:hover .why-work-card__icon:after {
-    transform: scale(1);
-    opacity: 1;
 }
 
 .why-work-card__icon {
@@ -539,27 +559,11 @@ svg {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
     .why-work-card__icon {
         --icon-dimensions: 100px;
         --icon-offset: 25px;
     }
-}
-
-.why-work-card__icon:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    content: '';
-    transform: scale(0.35);
-    transition: all .2s linear;
-    background-color: var(--bg-color--accent);
-    border-radius: inherit;
-    opacity: 0;
-    z-index: -1;
 }
 
 .why-work-card__icon svg {
