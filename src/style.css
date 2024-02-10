@@ -490,11 +490,12 @@ svg {
 
 @media (min-width: 750px) {
     .why-work__cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 300px);
+        justify-content: center;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     .why-work__cards {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -518,7 +519,7 @@ svg {
 }
 
 .why-work-card__icon {
-    --icon-dimensions: 80px;
+    --icon-dimensions: 70px;
     --icon-offset: 15px;
 
     position: relative;
@@ -532,6 +533,13 @@ svg {
 }
 
 @media (min-width: 750px) {
+    .why-work-card__icon {
+        --icon-dimensions: 85px;
+        --icon-offset: 20px;
+    }
+}
+
+@media (min-width: 1000px) {
     .why-work-card__icon {
         --icon-dimensions: 100px;
         --icon-offset: 25px;
