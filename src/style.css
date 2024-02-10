@@ -38,6 +38,7 @@
 
     --font-size--default: 16px;
     --font-size--md: 24px;
+    --font-size--semi-lg: 30px;
     --font-size--lg: 36px;
     --font-size--xl: 45px;
     --font-size--2xl: 60px;
@@ -226,10 +227,11 @@ svg {
 }
 
 .section__title {
-    --section-title-font-size: var(--font-size--lg);
+    --section-title-font-size: var(--font-size--semi-lg);
+    --section-title-font-weight: var(--font-weight--regular);
 
     font-size: var(--section-title-font-size);
-    font-weight: var(--font-weight--light);
+    font-weight: var(--section-title-font-weight);
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -237,6 +239,7 @@ svg {
 @media (min-width: 950px) {
     .section__title {
         --section-title-font-size: var(--font-size--xl);
+        --section-title-font-weight: var(--font-weight--light);
     }
 }
 
