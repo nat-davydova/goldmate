@@ -3,7 +3,8 @@
 :root {
     /* colors declarations !!! DON'T USE IT outside :root or directly */
     --white: #fff;
-    --white-smoke: #fbfbfb;
+    --white-smoke-100: #fbfbfb;
+    --white-smoke-200: #f5f5f5;
     --orange: #ff7f00;
     --dark-orange: #cc5c02;
     --grey-100: #d7d7d7;
@@ -18,7 +19,8 @@
     --dark: var(--grey-900);
     --ghost: var(--grey-100);
     --light: var(--white);
-    --semi-light: var(--white-smoke);
+    --semi-light-100: var(--white-smoke-100);
+    --semi-light-200: var(--white-smoke-200);
     --primary: var(--grey-900);
     --secondary: var(--grey-500);
     --tertiary: var(--grey-200);
@@ -60,7 +62,8 @@
     --overlay-color: rgba(0, 0, 0, .7);
 
     --bg-color--light: var(--light);
-    --bg-color--semi-light: var(--semi-light);
+    --bg-color--semi-light-100: var(--semi-light-100);
+    --bg-color--semi-light-200: var(--semi-light-200);
     --bg-color--accent: var(--accent);
     --bg-color--accent-dark: var(--accent-dark);
     --bg-color--secondary: var(--secondary);
@@ -69,6 +72,8 @@
     --bg-color--dark: var(--dark);
 
     --border-color--accent: var(--accent);
+    --border-color--ghost: var(--ghost);
+    --border-color--semi-light: var(--semi-light-200);
 }
 
 html,
@@ -192,7 +197,7 @@ svg {
 }
 
 .section--with-bg {
-    background-color: var(--bg-color--semi-light);
+    background-color: var(--bg-color--semi-light-100);
 }
 
 .section__wrapper {
@@ -546,31 +551,56 @@ svg {
     text-align: center;
 }
 
+.why-work-card:hover .why-work-card__icon {
+    color: var(--font-color--light);
+    border-color: var(--border-color--accent);
+}
+
+.why-work-card:hover .why-work-card__icon:after {
+    background-color: var(--bg-color--accent);
+}
+
 .why-work-card__icon {
-    --icon-dimensions: 70px;
-    --icon-offset: 15px;
+    --icon-dimensions: 80px;
+    --icon-offset: 20px;
 
     position: relative;
     width: var(--icon-dimensions);
     height: var(--icon-dimensions);
     padding: var(--icon-offset);
-    color: var(--font-color--accent);
-    transition: color .2s linear;
-    border: 2px solid currentColor;
+    color: var(--font-color--primary);
+    transition: border-color .2s linear;
+    border: 2px solid var(--border-color--semi-light);
+    border-radius: 50%;
+}
+
+.why-work-card__icon:after {
+    --circle-offset: 8%;
+    --circle-dimensions: calc(100% - var(--circle-offset) * 2);
+
+    position: absolute;
+    top: var(--circle-offset);
+    left: var(--circle-offset);
+    display: block;
+    width: var(--circle-dimensions);
+    height: var(--circle-dimensions);
+    transition: all .2s linear;
+    content: '';
+    background-color: var(--bg-color--semi-light-200);
     border-radius: 50%;
 }
 
 @media (min-width: 750px) {
     .why-work-card__icon {
-        --icon-dimensions: 85px;
-        --icon-offset: 20px;
+        --icon-dimensions: 95px;
+        --icon-offset: 25px;
     }
 }
 
 @media (min-width: 1200px) {
     .why-work-card__icon {
-        --icon-dimensions: 100px;
-        --icon-offset: 25px;
+        --icon-dimensions: 125px;
+        --icon-offset: 35px;
     }
 }
 
