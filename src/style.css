@@ -6,19 +6,23 @@
     --white-smoke: #fbfbfb;
     --orange: #ff7f00;
     --dark-orange: #cc5c02;
-    --grey: #333333;
-    --light-grey: #d7d7d7;
-    --medium-grey: #717171;
+    --grey-100: #d7d7d7;
+    --grey-200: #a4a4a4;
+    --grey-500: #717171;
+    --grey-900: #333333;
+
 
     /* functions colors declarations !!! USE ONLY THEM */
     --accent: var(--orange);
     --accent-dark: var(--dark-orange);
-    --dark: var(--grey);
-    --ghost: var(--light-grey);
+    --dark: var(--grey-900);
+    --ghost: var(--grey-100);
     --light: var(--white);
-    --primary: var(--grey);
-    --secondary: var(--medium-grey);
-    --tertiary: var(--white-smoke);
+    --semi-light: var(--white-smoke);
+    --primary: var(--grey-900);
+    --secondary: var(--grey-500);
+    --tertiary: var(--grey-200);
+
 
     /* media queries: we can't use them in @media directly but shall use only these breakpoints */
     --screen-xl: 1200px;
@@ -35,6 +39,7 @@
     --font-color--light: var(--light);
     --font-color--primary: var(--primary);
     --font-color--secondary: var(--secondary);
+    --font-color--tertiary: var(--tertiary);
 
     --font-size--default: 16px;
     --font-size--md: 24px;
@@ -55,10 +60,11 @@
     --overlay-color: rgba(0, 0, 0, .7);
 
     --bg-color--light: var(--light);
-    --bg-color--tertiary: var(--tertiary);
+    --bg-color--semi-light: var(--semi-light);
     --bg-color--accent: var(--accent);
     --bg-color--accent-dark: var(--accent-dark);
     --bg-color--secondary: var(--secondary);
+    --bg-color--tertiary: var(--secondary);
     --bg-color--ghost: var(--ghost);
     --bg-color--dark: var(--dark);
 
@@ -186,7 +192,7 @@ svg {
 }
 
 .section--with-bg {
-    background-color: var(--bg-color--tertiary);
+    background-color: var(--bg-color--semi-light);
 }
 
 .section__wrapper {
@@ -276,7 +282,9 @@ svg {
 }
 
 .btn--bordered {
-    color: var(--font-color--secondary);
+    --btn-bordered-color: var(--font-color--tertiary);
+
+    color: var(--btn-bordered-color);
     transition: all .2s linear 0s;
     border: 2px solid currentColor;
     background-color: transparent;
