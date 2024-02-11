@@ -109,6 +109,12 @@ svg {
     display: none;
 }
 
+.text-hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
 .container {
     width: 90%;
     max-width: 1170px;
@@ -213,6 +219,10 @@ svg {
     .section--offset-x {
         --section-offset: 50px;
     }
+}
+
+.section--no-offset-y {
+    --section-offset-y: 0;
 }
 
 .section--with-bg {
