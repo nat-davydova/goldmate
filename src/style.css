@@ -766,8 +766,42 @@ svg {
 }
 
 .projects__list {
-    display: flex;
+    display: grid;
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+.projects__list {
+    display: grid;
+}
+
+@media (min-width: 750px) {
+    .projects__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .projects__list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.project {
+    position: relative;
+    height: 450px;
+}
+
+.project__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project__image {
+    object-fit: cover;
 }
