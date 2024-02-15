@@ -221,6 +221,10 @@ svg {
     }
 }
 
+.section--no-offset-top {
+    padding-top: 0;
+}
+
 .section--no-offset-y {
     --section-offset-y: 0;
 }
@@ -752,4 +756,18 @@ svg {
         text-orientation: sideways;
         transform: rotate(180deg);
     }
+}
+
+.projects__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px
+}
+
+.projects__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
