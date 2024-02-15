@@ -824,6 +824,19 @@ svg {
     z-index: 2;
 }
 
+.project__title {
+    margin: 0;
+}
+
+.project__description p:first-child {
+    margin-top: 0;
+}
+
+.project__description p:last-child {
+    margin-bottom: 0;
+}
+
+
 .project__link {
     margin-top: auto;
     align-self: center;
