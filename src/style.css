@@ -812,7 +812,7 @@ svg {
     width: 100%;
     height: 100%;
     content: '';
-    background-color: rgba(0,0,0,.75);
+    background-color: rgba(0,0,0,.7);
     z-index: 1;
 }
 
@@ -865,14 +865,14 @@ svg {
     }
 }
 
-.project__description p:first-child {
-    margin-top: 0;
+.project__description {
+    margin: 0;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
-
-.project__description p:last-child {
-    margin-bottom: 0;
-}
-
 
 .project__link {
     margin-top: auto;
