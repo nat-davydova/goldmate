@@ -889,5 +889,16 @@ svg {
 }
 
 .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     text-align: center;
+}
+
+.service__icon {
+    --service-icon-dimensions: 90px;
+
+    width: var(--service-icon-dimensions);
+    height: var(--service-icon-dimensions);
 }
