@@ -902,3 +902,19 @@ svg {
     width: var(--service-icon-dimensions);
     height: var(--service-icon-dimensions);
 }
+
+.service__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: var(--font-weight--medium);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.service__descr p:first-child {
+    margin-top: 0;
+}
+
+.service__descr p:last-child {
+    margin-bottom: 0;
+}
