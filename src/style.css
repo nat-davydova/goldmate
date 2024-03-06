@@ -882,25 +882,45 @@ svg {
 .services__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 40px 30px;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
 .service {
+    --service-gap: 10px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: var(--service-gap);
     text-align: center;
 }
 
+@media (min-width: 750px) {
+    .service {
+        --service-gap: 20px;
+    }
+}
+
 .service__icon {
-    --service-icon-dimensions: 90px;
+    --service-icon-dimensions: 60px;
 
     width: var(--service-icon-dimensions);
     height: var(--service-icon-dimensions);
+}
+
+@media (min-width: 750px) {
+    .service__icon {
+        --service-icon-dimensions: 75px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .service__icon {
+        --service-icon-dimensions: 90px;
+    }
 }
 
 .service__title {
